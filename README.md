@@ -35,3 +35,4 @@ First of all, to update rhel 8 to rhel 9.3 your server need to be in 8.9 to use 
     ```bash
     ./upgrade_rhel8.sh | tee output_upgrade.txt
     ```
+3. Info about others Inhibitors check the file `others_inhibitors.md`
