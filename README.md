@@ -36,3 +36,8 @@ First of all, to update rhel 8 to rhel 9.3 your server need to be in 8.9 to use 
     ./upgrade_rhel8.sh | tee output_upgrade.txt
     ```
 3. Info about others Inhibitors check the file `others_inhibitors.md`
+
+## Extra
+If you are having long downtime at reboot you should consider change selinux to permissive mode and exclude dirs with large files.
+
+Link how to avoid downtime : https://access.redhat.com/solutions/7005567
