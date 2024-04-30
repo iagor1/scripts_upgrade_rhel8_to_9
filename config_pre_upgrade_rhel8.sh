@@ -10,7 +10,7 @@ cat /etc/redhat-release
 Comment_Nfs_Connections(){
 echo 'commenting nfs lines in fstab'
 sed -i '/nfs/s/^/#/' /etc/fstab
-#sed : qq linha que tiver nfs e add um comentario (#) no começo da linha com o ^
+#sed : commenting every line with nfs
 echo 'checking VDO devices'
 lsblk -o NAME,TYPE,FSTYPE,SIZE | grep vdo
 }
