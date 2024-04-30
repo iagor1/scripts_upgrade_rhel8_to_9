@@ -26,10 +26,10 @@ Fixing_Duplicate_Repo
 
 Fixing_Duplicate_Repo(){
 if [ -a /etc/yum.repos.d/zabbix-non-supported.repo ];then
-  echo "removendo zabbix-non-suported"
+  echo "removing zabbix-non-suported"
   rm -rf /etc/yum.repos.d/zabbix-non-supported.repo
 else
-  echo "arquivo não encontrado, skipping..."
+  echo "file not found, skipping..."
 fi
 }
 
