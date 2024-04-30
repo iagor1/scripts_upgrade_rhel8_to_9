@@ -1,7 +1,7 @@
 # RHEL 8 to RHEL 9 Upgrade Shell Scripts
 
 ## Description
-This repository contains shell scripts designed to facilitate the upgrade process from RHEL 8 to RHEL 9.3 
+This repository contains shell scripts designed to facilitate the upgrade process from RHEL 8 to RHEL 9.3. The inhibitors fixes in this repo if not fixed leapp will probably not upgrade your system. 
 
 First of all, to update rhel 8 to rhel 9.3 your server need to be in 8.9 to use leapp upgrade. With this command `subscription-manager release --set 8.9` after that we need to update with dnf.
 
@@ -39,6 +39,6 @@ First of all, to update rhel 8 to rhel 9.3 your server need to be in 8.9 to use 
 3. Info about others Inhibitors check the file `others_inhibitors.md`
 
 ## Extra
-If you are having long downtime at reboot you should consider change selinux to permissive mode and exclude dirs with large files.
+If you are having long downtime at reboot you should consider modify SELinux autorelabel process to ignore dirs with large files before upgrade, after the upgrade you can `fixfiles restore`. This trick can avoid long downtime. 
 
 Link how to avoid downtime : https://access.redhat.com/solutions/7005567
